@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explainable AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <span>X AI</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#overview" class="nav-link">Overview</a></li>
+                <li><a href="#fundamentals" class="nav-link">Fundamentals</a></li>
+                <li><a href="#techniques" class="nav-link">Techniques</a></li>
+                <li><a href="#applications" class="nav-link">Applications</a></li>
+                <li><a href="#challenges" class="nav-link">Challenges</a></li>
+                <li><a href="#resources" class="nav-link">Resources</a></li>
+                <li><a href="https://prateekdutta2001.github.io/NeuraNet/" class="nav-link external" target="_blank">Neural Networks</a></li>
+                <li><a href="https://prateekdutta2001.github.io/Agentic.AI/" class="nav-link external" target="_blank">Agentic AI</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">🔍 Explainable AI</h1>
+            <p class="hero-subtitle">Your Complete Guide to Transparent and Interpretable AI</p>
+            <p class="hero-description">From fundamental concepts to advanced techniques, discover everything about making AI systems understandable, transparent, and trustworthy.</p>
+            <div class="hero-buttons">
+                <a href="#overview" class="btn btn-primary">Start Learning</a>
+                <a href="#techniques" class="btn btn-secondary">Explore Techniques</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="section">
+        <div class="container">
+            <h2 class="section-title">What is Explainable AI?</h2>
+            <div class="overview-content">
+                <p class="intro-text">
+                    Explainable AI (XAI) represents a critical evolution in artificial intelligence—from "black box" systems that provide answers without reasoning to transparent models that can justify their decisions. XAI enables humans to understand, trust, and effectively manage AI systems in critical applications.
+                </p>
+
+                <div class="definition-card">
+                    <div class="definition-icon">🎯</div>
+                    <h3>Core Definition</h3>
+                    <p><strong>Explainable AI</strong> refers to methods and techniques in artificial intelligence that make the behavior and predictions of AI models understandable to humans. Unlike opaque "black box" models, XAI systems provide insights into how they arrive at decisions, what features influence predictions, and why certain outcomes are produced.</p>
+                    <p class="key-elements"><strong>Key Elements:</strong> XAI combines interpretable model architectures, post-hoc explanation techniques, visualization methods, and human-centered design to create AI systems that are transparent, trustworthy, and accountable.</p>
+                </div>
+
+                <div class="characteristics-grid">
+                    <div class="char-card">
+                        <div class="char-icon">🔍</div>
+                        <h4>Transparency</h4>
+                        <p>Clear visibility into model architecture, decision-making process, and the factors that influence predictions.</p>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-icon">🤝</div>
+                        <h4>Trust</h4>
+                        <p>Building confidence in AI systems through understandable reasoning and consistent, explainable behavior.</p>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-icon">⚖️</div>
+                        <h4>Accountability</h4>
+                        <p>Enabling stakeholders to validate decisions, detect biases, and ensure compliance with regulations and ethics.</p>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-icon">🎨</div>
+                        <h4>Interpretability</h4>
+                        <p>Making complex model outputs comprehensible to diverse audiences, from technical experts to end-users.</p>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-icon">🔄</div>
+                        <h4>Debuggability</h4>
+                        <p>Facilitating error detection, model improvement, and systematic debugging through understanding model behavior.</p>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-icon">📊</div>
+                        <h4>Fairness</h4>
+                        <p>Identifying and mitigating biases by understanding which features drive predictions and how different groups are affected.</p>
+                    </div>
+                </div>
+
+                <div class="why-matters">
+                    <h3>🚀 Why It Matters</h3>
+                    <p><strong>Impact Areas:</strong> XAI is critical for deploying AI in high-stakes domains like healthcare, finance, criminal justice, and autonomous systems where decisions directly impact human lives. Regulations like GDPR's "right to explanation" and increasing ethical concerns make XAI not just desirable but mandatory.</p>
+                    <p><strong>Paradigm Shift:</strong> As AI systems become more powerful and pervasive, the need to understand and control them grows exponentially. XAI bridges the gap between AI capability and human oversight, enabling responsible AI deployment at scale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connection to Neural Networks & Agentic AI -->
+    <section class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">XAI in Context</h2>
+            <div class="context-grid">
+                <div class="context-card">
+                    <div class="context-header">
+                        <i class="fas fa-project-diagram"></i>
+                        <h3>Neural Networks & XAI</h3>
+                    </div>
+                    <p>Neural networks are powerful but inherently opaque. Deep learning models with millions of parameters create complex, non-linear decision boundaries that are difficult to interpret. XAI techniques like attention visualization, saliency maps, and layer-wise relevance propagation help us understand what features neural networks learn and how they make predictions.</p>
+                    <div class="connection-points">
+                        <span class="tag">Architecture Interpretation</span>
+                        <span class="tag">Feature Visualization</span>
+                        <span class="tag">Attention Mechanisms</span>
+                        <span class="tag">Gradient-Based Methods</span>
+                    </div>
+                    <a href="https://prateekdutta2001.github.io/NeuraNet/" class="learn-more" target="_blank">
+                        Learn More About Neural Networks <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="context-card">
+                    <div class="context-header">
+                        <i class="fas fa-robot"></i>
+                        <h3>Agentic AI & XAI</h3>
+                    </div>
+                    <p>Agentic AI systems that make autonomous decisions require even greater explainability. When AI agents plan multi-step actions, interact with environments, and make consequential decisions, humans need to understand the reasoning behind agent behavior, goal decomposition strategies, and action selection processes. XAI enables transparent, accountable autonomous systems.</p>
+                    <div class="connection-points">
+                        <span class="tag">Decision Transparency</span>
+                        <span class="tag">Goal Reasoning</span>
+                        <span class="tag">Action Justification</span>
+                        <span class="tag">Trust in Autonomy</span>
+                    </div>
+                    <a href="https://prateekdutta2001.github.io/Agentic.AI/" class="learn-more" target="_blank">
+                        Learn More About Agentic AI <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fundamentals Section -->
+    <section id="fundamentals" class="section">
+        <div class="container">
+            <h2 class="section-title">Core Concepts</h2>
+            
+            <div class="concepts-grid">
+                <div class="concept-card">
+                    <div class="concept-icon">🔓</div>
+                    <h3>Interpretability</h3>
+                    <p><strong>Definition:</strong> The degree to which a human can understand the cause of a decision made by an AI model.</p>
+                    <p><strong>Types:</strong></p>
+                    <ul>
+                        <li><strong>Global Interpretability:</strong> Understanding the entire model logic and how it makes decisions across all inputs</li>
+                        <li><strong>Local Interpretability:</strong> Understanding why the model made a specific decision for a particular input</li>
+                    </ul>
+                    <p><strong>Approaches:</strong> Intrinsically interpretable models (decision trees, linear models) vs. post-hoc explanation techniques for complex models.</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="concept-icon">💡</div>
+                    <h3>Transparency</h3>
+                    <p><strong>Levels of Transparency:</strong></p>
+                    <ul>
+                        <li><strong>Simulatability:</strong> A human can mentally simulate the entire model</li>
+                        <li><strong>Decomposability:</strong> Each part (input, parameters, calculations) is understandable</li>
+                        <li><strong>Algorithmic Transparency:</strong> The learning algorithm itself is understood</li>
+                    </ul>
+                    <p><strong>Trade-offs:</strong> Often exists tension between model complexity/accuracy and transparency. XAI seeks to balance these.</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="concept-icon">📐</div>
+                    <h3>Model Complexity</h3>
+                    <p><strong>Accuracy vs. Interpretability:</strong> Simple models (linear regression, decision trees) are inherently interpretable but may lack accuracy. Complex models (deep neural networks, ensemble methods) achieve high accuracy but are harder to interpret.</p>
+                    <div class="complexity-spectrum">
+                        <div class="spectrum-item">
+                            <span class="label">High Interpretability</span>
+                            <div class="models">Linear Models, Decision Trees</div>
+                        </div>
+                        <div class="spectrum-arrow">→</div>
+                        <div class="spectrum-item">
+                            <span class="label">Medium</span>
+                            <div class="models">GAMs, Rule Lists</div>
+                        </div>
+                        <div class="spectrum-arrow">→</div>
+                        <div class="spectrum-item">
+                            <span class="label">Low Interpretability</span>
+                            <div class="models">Deep Neural Networks, Ensemble Methods</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="concept-icon">🎯</div>
+                    <h3>Explanation Types</h3>
+                    <p><strong>Feature Importance:</strong> Which input features most influence the model's predictions?</p>
+                    <p><strong>Example-Based:</strong> Similar examples, counterfactual explanations, prototypes</p>
+                    <p><strong>Rule-Based:</strong> IF-THEN rules that approximate model behavior</p>
+                    <p><strong>Visual:</strong> Heatmaps, saliency maps, decision boundaries, attention visualizations</p>
+                    <p><strong>Natural Language:</strong> Textual explanations that describe reasoning in human language</p>
+                </div>
+            </div>
+
+            <div class="principles-section">
+                <h3>🌟 Key Principles of XAI</h3>
+                <div class="principles-list">
+                    <div class="principle-item">
+                        <div class="principle-number">1</div>
+                        <div class="principle-content">
+                            <h4>Explanation Accuracy</h4>
+                            <p>Explanations should faithfully represent the model's actual decision-making process, not just plausible-sounding justifications.</p>
+                        </div>
+                    </div>
+                    <div class="principle-item">
+                        <div class="principle-number">2</div>
+                        <div class="principle-content">
+                            <h4>Human Comprehensibility</h4>
+                            <p>Explanations must be understandable to the target audience, whether technical experts or end-users.</p>
+                        </div>
+                    </div>
+                    <div class="principle-item">
+                        <div class="principle-number">3</div>
+                        <div class="principle-content">
+                            <h4>Explanation Consistency</h4>
+                            <p>Similar inputs should receive similar explanations, maintaining coherence in the explanation system.</p>
+                        </div>
+                    </div>
+                    <div class="principle-item">
+                        <div class="principle-number">4</div>
+                        <div class="principle-content">
+                            <h4>Actionability</h4>
+                            <p>Explanations should enable users to take informed actions, whether debugging, auditing, or decision-making.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Techniques Section -->
+    <section id="techniques" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">XAI Techniques & Methods</h2>
+
+            <div class="techniques-intro">
+                <p>A comprehensive toolkit of methods for making AI systems explainable, from model-agnostic approaches to specialized techniques for specific architectures.</p>
+            </div>
+
+            <!-- Model-Agnostic Methods -->
+            <div class="technique-category">
+                <h3 class="category-title">
+                    <i class="fas fa-layer-group"></i> Model-Agnostic Methods
+                </h3>
+                <p class="category-desc">These techniques work with any machine learning model, treating it as a black box.</p>
+
+                <div class="technique-grid">
+                    <div class="technique-card">
+                        <div class="technique-header">
+                            <span class="technique-badge">Popular</span>
+                            <h4>LIME (Local Interpretable Model-agnostic Explanations)</h4>
+                        </div>
+                        <p><strong>How It Works:</strong> Approximates the complex model locally around a prediction with an interpretable model (like linear regression). Perturbs input data and observes how predictions change.</p>
+                        <div class="technique-details">
+                            <p><strong>Process:</strong></p>
+                            <ol>
+                                <li>Select instance to explain</li>
+                                <li>Generate perturbed samples around it</li>
+                                <li>Get predictions for perturbed samples</li>
+                                <li>Fit interpretable model weighted by proximity</li>
+                                <li>Extract feature importance from simple model</li>
+                            </ol>
+                            <p><strong>Use Cases:</strong> Image classification, text classification, tabular data</p>
+                            <p><strong>Advantages:</strong> Works with any model, provides local explanations, intuitive</p>
+                            <p><strong>Limitations:</strong> Instability with perturbation sampling, local scope only</p>
+                        </div>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-header">
+                            <span class="technique-badge">Advanced</span>
+                            <h4>SHAP (SHapley Additive exPlanations)</h4>
+                        </div>
+                        <p><strong>How It Works:</strong> Uses game theory (Shapley values) to assign each feature an importance value for a particular prediction. Considers all possible feature combinations.</p>
+                        <div class="technique-details">
+                            <p><strong>Key Properties:</strong></p>
+                            <ul>
+                                <li><strong>Consistency:</strong> If model changes to rely more on a feature, importance doesn't decrease</li>
+                                <li><strong>Local Accuracy:</strong> Sum of feature contributions equals model output</li>
+                                <li><strong>Missingness:</strong> Missing features have zero contribution</li>
+                            </ul>
+                            <p><strong>Variants:</strong> KernelSHAP (model-agnostic), TreeSHAP (tree models), DeepSHAP (neural networks)</p>
+                            <p><strong>Advantages:</strong> Theoretically sound, consistent, local and global insights</p>
+                            <p><strong>Limitations:</strong> Computationally expensive, requires many model evaluations</p>
+                        </div>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-header">
+                            <h4>Partial Dependence Plots (PDP)</h4>
+                        </div>
+                        <p><strong>How It Works:</strong> Shows the marginal effect of one or two features on the predicted outcome by averaging predictions over all other features.</p>
+                        <div class="technique-details">
+                            <p><strong>Formula:</strong> PDP shows E[ŷ | X_S = x_S] where X_S is the feature(s) of interest</p>
+                            <p><strong>Use Cases:</strong> Understanding feature effects, detecting non-linearity, feature interaction</p>
+                            <p><strong>Advantages:</strong> Global interpretation, visualizes non-linear relationships</p>
+                            <p><strong>Limitations:</strong> Assumes feature independence, can hide heterogeneous effects</p>
+                        </div>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-header">
+                            <h4>ICE (Individual Conditional Expectation)</h4>
+                        </div>
+                        <p><strong>How It Works:</strong> Extension of PDP that shows prediction for each instance separately as a feature varies, revealing heterogeneity that PDP averages out.</p>
+                        <div class="technique-details">
+                            <p><strong>Advantages:</strong> Shows individual variation, detects interactions PDP misses</p>
+                            <p><strong>Visualization:</strong> Multiple lines (one per instance) vs. single line (PDP)</p>
+                        </div>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-header">
+                            <h4>Permutation Feature Importance</h4>
+                        </div>
+                        <p><strong>How It Works:</strong> Measures increase in model error when a feature's values are randomly shuffled, breaking the relationship between feature and target.</p>
+                        <div class="technique-details">
+                            <p><strong>Process:</strong> Compute baseline error → Permute feature → Compute new error → Importance = error increase</p>
+                            <p><strong>Advantages:</strong> Model-agnostic, considers all feature interactions, based on model performance</p>
+                            <p><strong>Limitations:</strong> Requires retraining or multiple predictions, can be biased by correlated features</p>
+                        </div>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-header">
+                            <h4>Counterfactual Explanations</h4>
+                        </div>
+                        <p><strong>How It Works:</strong> Finds the smallest change to features that would flip the prediction to a different outcome. Answers "What would need to change for a different result?"</p>
+                        <div class="technique-details">
+                            <p><strong>Example:</strong> "Your loan was denied. If your income was $5,000 higher, it would be approved."</p>
+                            <p><strong>Advantages:</strong> Actionable insights, human-friendly, reveals decision boundaries</p>
+                            <p><strong>Challenges:</strong> Finding realistic counterfactuals, ensuring actionability</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Neural Network Specific -->
+            <div class="technique-category">
+                <h3 class="category-title">
+                    <i class="fas fa-brain"></i> Neural Network Specific Methods
+                </h3>
+                <p class="category-desc">Techniques designed specifically for deep learning models.</p>
+
+                <div class="technique-grid">
+                    <div class="technique-card">
+                        <div class="technique-header">
+                            <span class="technique-badge">Visual</span>
+                            <h4>Saliency Maps</h4>
+                        </div>
+                        <p><strong>How It Works:</strong> Computes gradient of output with respect to input to show which pixels most influence the prediction.</p>
+                        <div class="technique-details">
+                            <p><strong>Vanilla Gradient:</strong> ∂y/∂x shows pixel importance</p>
+                            <p><strong>Variants:</strong></p>
+                            <ul>
+                                <li><strong>Gradient × Input:</strong> Considers both gradient and input magnitude</li>
+                                <li><strong>Integrated Gradients:</strong> Accumulates gradients along path from baseline to input</li>
+                                <li><strong>SmoothGrad:</strong> Averages gradients over noisy samples for smoother maps</li>
+                            </ul>
+                            <p><strong>Applications:</strong> Image classification, object detection, medical imaging</p>
+                        </div>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-header">
+                            <span class="technique-badge">Popular</span>
+                            <h4>Grad-CAM (Gradient-weighted Class Activation Mapping)</h4>
+                        </div>
+                        <p><strong>How It Works:</strong> Uses gradients flowing into final convolutional layer to produce coarse localization map highlighting important regions for prediction.</p>
+                        <div class="technique-details">
+                            <p><strong>Process:</strong> Compute gradients → Global average pooling → Weight feature maps → Sum with ReLU → Upsample to input size</p>
+                            <p><strong>Variants:</strong> Grad-CAM++, Score-CAM, LayerCAM</p>
+                            <p><strong>Advantages:</strong> Class-specific, works with any CNN, no architecture modification needed</p>
+                        </div>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-header">
+                            <h4>Attention Visualization</h4>
+                        </div>
+                        <p><strong>How It Works:</strong> For models with attention mechanisms (Transformers), visualizes attention weights to show which parts of input the model focuses on.</p>
+                        <div class="technique-details">
+                            <p><strong>Applications:</strong> NLP (word importance), Vision Transformers (image regions), multimodal models</p>
+                            <p><strong>Interpretation:</strong> Higher attention weights indicate greater relevance to prediction</p>
+                            <p><strong>Tools:</strong> BertViz, Attention Flow, Layer-wise attention analysis</p>
+                        </div>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-header">
+                            <h4>Layer-wise Relevance Propagation (LRP)</h4>
+                        </div>
+                        <p><strong>How It Works:</strong> Decomposes the prediction backward through the network, redistributing relevance scores from output to input.</p>
+                        <div class="technique-details">
+                            <p><strong>Principle:</strong> Conservation of relevance - sum of relevances at each layer equals the output</p>
+                            <p><strong>Advantages:</strong> Theoretically grounded, consistent, produces sharp relevance maps</p>
+                        </div>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-header">
+                            <h4>Activation Maximization</h4>
+                        </div>
+                        <p><strong>How It Works:</strong> Generates synthetic input that maximally activates a specific neuron or class, revealing what the model has learned to detect.</p>
+                        <div class="technique-details">
+                            <p><strong>Applications:</strong> Understanding neuron behavior, detecting learned patterns, debugging</p>
+                            <p><strong>Techniques:</strong> DeepDream, feature visualization, style transfer</p>
+                        </div>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-header">
+                            <h4>Concept Activation Vectors (CAV)</h4>
+                        </div>
+                        <p><strong>How It Works:</strong> Tests whether a human-interpretable concept (e.g., "striped") is important for a model's classification by learning direction in activation space.</p>
+                        <div class="technique-details">
+                            <p><strong>TCAV:</strong> Testing with CAV - quantifies conceptual sensitivity</p>
+                            <p><strong>Advantages:</strong> Tests high-level concepts, human-friendly, discovers biases</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Intrinsically Interpretable Models -->
+            <div class="technique-category">
+                <h3 class="category-title">
+                    <i class="fas fa-sitemap"></i> Intrinsically Interpretable Models
+                </h3>
+                <p class="category-desc">Models designed from the ground up to be interpretable.</p>
+
+                <div class="technique-grid">
+                    <div class="technique-card">
+                        <div class="technique-header">
+                            <h4>Decision Trees</h4>
+                        </div>
+                        <p><strong>Why Interpretable:</strong> Follow clear IF-THEN rules, visualizable structure, trace prediction path</p>
+                        <div class="technique-details">
+                            <p><strong>Advantages:</strong> Complete transparency, handles non-linearity, no preprocessing needed</p>
+                            <p><strong>Limitations:</strong> Prone to overfitting, unstable, lower accuracy on complex data</p>
+                            <p><strong>Improvements:</strong> Pruning, maximum depth limits, minimum samples per leaf</p>
+                        </div>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-header">
+                            <h4>Linear/Logistic Regression</h4>
+                        </div>
+                        <p><strong>Why Interpretable:</strong> Coefficients directly show feature importance and direction of effect</p>
+                        <div class="technique-details">
+                            <p><strong>Interpretation:</strong> Each coefficient represents change in output per unit change in feature</p>
+                            <p><strong>Limitations:</strong> Assumes linearity, limited to simple relationships</p>
+                        </div>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-header">
+                            <h4>Generalized Additive Models (GAM)</h4>
+                        </div>
+                        <p><strong>How It Works:</strong> Extends linear models with smooth non-linear functions for each feature: y = f₁(x₁) + f₂(x₂) + ... + fₙ(xₙ)</p>
+                        <div class="technique-details">
+                            <p><strong>Advantages:</strong> Captures non-linearity, maintains interpretability, visualizes feature effects</p>
+                            <p><strong>Tools:</strong> InterpretML (Microsoft), PyGAM, mgcv (R)</p>
+                        </div>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-header">
+                            <h4>Rule-Based Models</h4>
+                        </div>
+                        <p><strong>Types:</strong> Decision rules, rule lists, rule sets</p>
+                        <div class="technique-details">
+                            <p><strong>Example:</strong> IF (age > 60 AND cholesterol > 240) THEN high_risk</p>
+                            <p><strong>Learning:</strong> Extracted from data or domain experts</p>
+                            <p><strong>Advantages:</strong> Highly interpretable, verifiable, align with human reasoning</p>
+                        </div>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-header">
+                            <h4>Prototype-Based Models</h4>
+                        </div>
+                        <p><strong>How It Works:</strong> Classifications based on similarity to learned prototypical examples</p>
+                        <div class="technique-details">
+                            <p><strong>Methods:</strong> k-NN, case-based reasoning, prototype networks</p>
+                            <p><strong>Explanation:</strong> "This input is classified as X because it's similar to these examples..."</p>
+                        </div>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-header">
+                            <h4>Attention-Based Models</h4>
+                        </div>
+                        <p><strong>How It Works:</strong> Built-in attention mechanisms show which inputs the model focuses on</p>
+                        <div class="technique-details">
+                            <p><strong>Examples:</strong> Transformers, attention networks, neural Turing machines</p>
+                            <p><strong>Interpretability:</strong> Attention weights provide natural explanations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evaluation Metrics -->
+            <div class="metrics-section">
+                <h3>📊 Evaluating Explanations</h3>
+                <p>How do we measure the quality of explanations?</p>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h4>Fidelity</h4>
+                        <p>How accurately does the explanation reflect the model's actual behavior?</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Consistency</h4>
+                        <p>Do similar instances receive similar explanations?</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Stability</h4>
+                        <p>Are explanations robust to small perturbations in input?</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Comprehensibility</h4>
+                        <p>Can the target audience understand the explanation?</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Completeness</h4>
+                        <p>Does the explanation cover all relevant factors?</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Actionability</h4>
+                        <p>Can users make informed decisions based on the explanation?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section id="applications" class="section">
+        <div class="container">
+            <h2 class="section-title">Real-World Applications</h2>
+
+            <div class="applications-grid">
+                <div class="app-card">
+                    <div class="app-icon">🏥</div>
+                    <h3>Healthcare & Medical Diagnosis</h3>
+                    <p><strong>Critical Need:</strong> Doctors need to understand and validate AI recommendations before making life-or-death decisions. Regulations require explainability for medical devices.</p>
+                    <div class="app-details">
+                        <p><strong>Applications:</strong></p>
+                        <ul>
+                            <li>Disease diagnosis from medical images (highlighting affected regions)</li>
+                            <li>Treatment recommendation systems (explaining why specific treatments suggested)</li>
+                            <li>Drug discovery (understanding molecular interactions)</li>
+                            <li>Patient risk prediction (identifying risk factors)</li>
+                        </ul>
+                        <p><strong>Techniques Used:</strong> Grad-CAM for radiology images, attention visualization for patient records, SHAP for risk scoring</p>
+                        <p><strong>Impact:</strong> Increased clinical adoption, improved diagnostic accuracy, better patient outcomes, regulatory compliance</p>
+                    </div>
+                </div>
+
+                <div class="app-card">
+                    <div class="app-icon">💰</div>
+                    <h3>Finance & Credit Scoring</h3>
+                    <p><strong>Regulatory Requirement:</strong> GDPR, ECOA, and other regulations mandate explanation of credit decisions. Customers have right to understand why applications were denied.</p>
+                    <div class="app-details">
+                        <p><strong>Applications:</strong></p>
+                        <ul>
+                            <li>Loan approval/rejection (explaining decision factors)</li>
+                            <li>Fraud detection (justifying suspicious activity flags)</li>
+                            <li>Investment recommendations (showing reasoning behind suggestions)</li>
+                            <li>Risk assessment (transparent credit scoring)</li>
+                        </ul>
+                        <p><strong>Techniques Used:</strong> LIME for individual decisions, counterfactuals ("if your income were X higher..."), feature importance for credit factors</p>
+                        <p><strong>Benefits:</strong> Regulatory compliance, customer trust, bias detection, fair lending practices</p>
+                    </div>
+                </div>
+
+                <div class="app-card">
+                    <div class="app-icon">⚖️</div>
+                    <h3>Criminal Justice & Legal</h3>
+                    <p><strong>Ethical Imperative:</strong> Decisions about bail, sentencing, and parole directly impact human freedom. Systems must be transparent, fair, and challengeable.</p>
+                    <div class="app-details">
+                        <p><strong>Applications:</strong></p>
+                        <ul>
+                            <li>Recidivism risk prediction (explaining risk scores)</li>
+                            <li>Bail decisions (justifying recommendations)</li>
+                            <li>Sentencing guidelines (transparent factor weighting)</li>
+                            <li>Legal document analysis (citation of relevant precedents)</li>
+                        </ul>
+                        <p><strong>Concerns:</strong> Bias amplification, lack of transparency, accountability gaps</p>
+                        <p><strong>XAI Role:</strong> Enable auditing, detect bias, ensure fairness, maintain public trust</p>
+                    </div>
+                </div>
+
+                <div class="app-card">
+                    <div class="app-icon">🚗</div>
+                    <h3>Autonomous Vehicles</h3>
+                    <p><strong>Safety Critical:</strong> Understanding why autonomous systems make driving decisions is crucial for safety, debugging, liability, and public acceptance.</p>
+                    <div class="app-details">
+                        <p><strong>Applications:</strong></p>
+                        <ul>
+                            <li>Driving decision explanation (why brake, turn, accelerate)</li>
+                            <li>Object detection justification (what was detected and where)</li>
+                            <li>Accident investigation (post-hoc analysis of decisions)</li>
+                            <li>Safety validation (ensuring correct reasoning)</li>
+                        </ul>
+                        <p><strong>Techniques:</strong> Attention maps on camera inputs, decision tree interpretable planners, counterfactual analysis</p>
+                    </div>
+                </div>
+
+                <div class="app-card">
+                    <div class="app-icon">🏭</div>
+                    <h3>Manufacturing & Quality Control</h3>
+                    <p><strong>Operational Value:</strong> Understanding why defects are detected enables process improvement and root cause analysis.</p>
+                    <div class="app-details">
+                        <p><strong>Applications:</strong></p>
+                        <ul>
+                            <li>Defect detection (highlighting defect locations and types)</li>
+                            <li>Predictive maintenance (explaining failure predictions)</li>
+                            <li>Process optimization (identifying inefficiency causes)</li>
+                            <li>Quality prediction (factors affecting product quality)</li>
+                        </ul>
+                        <p><strong>Benefits:</strong> Reduced waste, improved quality, faster root cause analysis, worker training</p>
+                    </div>
+                </div>
+
+                <div class="app-card">
+                    <div class="app-icon">🎯</div>
+                    <h3>Marketing & Recommendation Systems</h3>
+                    <p><strong>User Experience:</strong> Explaining recommendations increases trust, satisfaction, and engagement. Helps users discover why certain products are suggested.</p>
+                    <div class="app-details">
+                        <p><strong>Applications:</strong></p>
+                        <ul>
+                            <li>Product recommendations (explaining why items are suggested)</li>
+                            <li>Content recommendations (showing reasoning for movies, music, articles)</li>
+                            <li>Customer segmentation (understanding segment characteristics)</li>
+                            <li>Churn prediction (identifying at-risk customers and reasons)</li>
+                        </ul>
+                        <p><strong>Techniques:</strong> Feature importance, similar user explanations, content-based reasoning</p>
+                    </div>
+                </div>
+
+                <div class="app-card">
+                    <div class="app-icon">🔐</div>
+                    <h3>Cybersecurity</h3>
+                    <p><strong>Actionable Intelligence:</strong> Security analysts need to understand threat detection reasoning to prioritize responses and improve defenses.</p>
+                    <div class="app-details">
+                        <p><strong>Applications:</strong></p>
+                        <ul>
+                            <li>Intrusion detection (explaining why traffic is flagged)</li>
+                            <li>Malware classification (identifying malicious patterns)</li>
+                            <li>Anomaly detection (showing deviations from normal)</li>
+                            <li>Vulnerability assessment (prioritizing security risks)</li>
+                        </ul>
+                        <p><strong>Value:</strong> Faster incident response, reduced false positives, knowledge transfer</p>
+                    </div>
+                </div>
+
+                <div class="app-card">
+                    <div class="app-icon">🌾</div>
+                    <h3>Agriculture</h3>
+                    <p><strong>Decision Support:</strong> Farmers need to understand AI recommendations about crop management, pest control, and resource allocation.</p>
+                    <div class="app-details">
+                        <p><strong>Applications:</strong></p>
+                        <ul>
+                            <li>Crop disease detection (identifying affected areas and disease types)</li>
+                            <li>Yield prediction (factors affecting harvest estimates)</li>
+                            <li>Irrigation optimization (explaining watering recommendations)</li>
+                            <li>Pest identification (visual highlighting of pests)</li>
+                        </ul>
+                        <p><strong>Impact:</strong> Increased trust in AI tools, better decision-making, sustainable farming</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges Section -->
+    <section id="challenges" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Challenges & Considerations</h2>
+
+            <div class="challenges-grid">
+                <div class="challenge-card">
+                    <div class="challenge-icon">⚖️</div>
+                    <h3>Accuracy-Interpretability Tradeoff</h3>
+                    <p><strong>The Dilemma:</strong> More accurate models (deep neural networks, large ensembles) tend to be less interpretable. Simpler, interpretable models may sacrifice performance.</p>
+                    <div class="challenge-details">
+                        <p><strong>Approaches:</strong></p>
+                        <ul>
+                            <li>Use interpretable models when accuracy difference is small</li>
+                            <li>Apply post-hoc explanations to complex models</li>
+                            <li>Develop inherently interpretable neural architectures</li>
+                            <li>Consider domain requirements—some applications prioritize interpretability</li>
+                        </ul>
+                        <p><strong>Research Direction:</strong> Creating high-accuracy interpretable models, efficient post-hoc methods</p>
+                    </div>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-icon">🎭</div>
+                    <h3>Explanation Fidelity</h3>
+                    <p><strong>The Problem:</strong> Explanations may be plausible-sounding but not faithful to the model's actual reasoning. Approximate methods may misrepresent the model.</p>
+                    <div class="challenge-details">
+                        <p><strong>Concerns:</strong></p>
+                        <ul>
+                            <li>LIME's local approximation may not generalize</li>
+                            <li>Saliency maps can be fragile and inconsistent</li>
+                            <li>Attention weights don't always reflect true importance</li>
+                        </ul>
+                        <p><strong>Solutions:</strong> Sanity checks, adversarial testing, comparing multiple methods, quantitative fidelity metrics</p>
+                    </div>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-icon">👥</div>
+                    <h3>Human Factors</h3>
+                    <p><strong>User Variability:</strong> Different audiences need different types of explanations. Technical experts, domain experts, and end-users have varying needs.</p>
+                    <div class="challenge-details">
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li><strong>Level of Detail:</strong> Technical depth vs. high-level summary</li>
+                            <li><strong>Format:</strong> Visual, textual, numerical, interactive</li>
+                            <li><strong>Context:</strong> What information does the user already have?</li>
+                            <li><strong>Goals:</strong> Debugging vs. building trust vs. learning</li>
+                        </ul>
+                        <p><strong>Approach:</strong> User studies, adaptive explanations, multiple explanation types</p>
+                    </div>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-icon">💻</div>
+                    <h3>Computational Cost</h3>
+                    <p><strong>Efficiency Challenge:</strong> Many explanation methods are computationally expensive, requiring numerous model evaluations or gradient computations.</p>
+                    <div class="challenge-details">
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li>SHAP requires exponential evaluations (mitigated by sampling)</li>
+                            <li>LIME needs multiple perturbations per explanation</li>
+                            <li>Some methods don't scale to high-dimensional data</li>
+                        </ul>
+                        <p><strong>Solutions:</strong> Approximations, caching, efficient architectures, pre-computed explanations</p>
+                    </div>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-icon">🔄</div>
+                    <h3>Explanation Instability</h3>
+                    <p><strong>Consistency Issue:</strong> Small changes in input can lead to very different explanations, even when predictions remain similar.</p>
+                    <div class="challenge-details">
+                        <p><strong>Causes:</strong> Gradient instability, random sampling (LIME), model sensitivity</p>
+                        <p><strong>Impact:</strong> Reduced user trust, difficulty in decision-making</p>
+                        <p><strong>Mitigation:</strong> Smoothing techniques (SmoothGrad), ensemble explanations, robust explanation methods</p>
+                    </div>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-icon">🎯</div>
+                    <h3>Evaluation Challenges</h3>
+                    <p><strong>Measurement Problem:</strong> No universally accepted metrics for explanation quality. Evaluation often requires human studies.</p>
+                    <div class="challenge-details">
+                        <p><strong>Questions:</strong></p>
+                        <ul>
+                            <li>What makes an explanation "good"?</li>
+                            <li>How to measure comprehensibility objectively?</li>
+                            <li>Balance between fidelity and simplicity?</li>
+                        </ul>
+                        <p><strong>Approaches:</strong> User studies, proxy metrics, comparison to ground truth (synthetic data), sanity checks</p>
+                    </div>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-icon">🌐</div>
+                    <h3>Scope & Generalization</h3>
+                    <p><strong>Limitation:</strong> Local explanations (LIME, SHAP for individual predictions) may not capture global model behavior. Global methods may miss instance-specific nuances.</p>
+                    <div class="challenge-details">
+                        <p><strong>Tradeoff:</strong> Local detail vs. global overview</p>
+                        <p><strong>Solutions:</strong> Combine local and global methods, hierarchical explanations, interactive exploration tools</p>
+                    </div>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-icon">🚨</div>
+                    <h3>Adversarial Explanations</h3>
+                    <p><strong>Security Risk:</strong> Explanation methods themselves can be manipulated. Models can be trained to provide misleading explanations while maintaining accuracy.</p>
+                    <div class="challenge-details">
+                        <p><strong>Attack:</strong> Adversaries might craft models that give deceptive explanations to hide biases or gain approval</p>
+                        <p><strong>Defense:</strong> Multiple explanation methods, independent auditing, explanation consistency checks</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="best-practices-section">
+                <h3>✅ Best Practices for Deploying XAI</h3>
+                <div class="practices-grid">
+                    <div class="practice-card">
+                        <div class="practice-number">1</div>
+                        <div class="practice-content">
+                            <h4>Know Your Audience</h4>
+                            <p>Tailor explanations to the target users. Data scientists need different information than end-users or regulators.</p>
+                        </div>
+                    </div>
+                    <div class="practice-card">
+                        <div class="practice-number">2</div>
+                        <div class="practice-content">
+                            <h4>Use Multiple Methods</h4>
+                            <p>Don't rely on a single explanation technique. Combine multiple approaches to get a more complete picture.</p>
+                        </div>
+                    </div>
+                    <div class="practice-card">
+                        <div class="practice-number">3</div>
+                        <div class="practice-content">
+                            <h4>Validate Explanations</h4>
+                            <p>Test explanation fidelity through sanity checks, comparison to ground truth, and consistency testing.</p>
+                        </div>
+                    </div>
+                    <div class="practice-card">
+                        <div class="practice-number">4</div>
+                        <div class="practice-content">
+                            <h4>Consider Interpretable Models First</h4>
+                            <p>If an interpretable model achieves acceptable performance, prefer it over more complex alternatives.</p>
+                        </div>
+                    </div>
+                    <div class="practice-card">
+                        <div class="practice-number">5</div>
+                        <div class="practice-content">
+                            <h4>Design for Actionability</h4>
+                            <p>Ensure explanations enable users to take informed actions, whether debugging, auditing, or decision-making.</p>
+                        </div>
+                    </div>
+                    <div class="practice-card">
+                        <div class="practice-number">6</div>
+                        <div class="practice-content">
+                            <h4>Document and Monitor</h4>
+                            <p>Maintain clear documentation of explanation methods used and monitor explanation quality over time.</p>
+                        </div>
+                    </div>
+                    <div class="practice-card">
+                        <div class="practice-number">7</div>
+                        <div class="practice-content">
+                            <h4>Iterate with User Feedback</h4>
+                            <p>Conduct user studies to understand what explanations work. Refine based on actual user needs and comprehension.</p>
+                        </div>
+                    </div>
+                    <div class="practice-card">
+                        <div class="practice-number">8</div>
+                        <div class="practice-content">
+                            <h4>Balance Detail and Simplicity</h4>
+                            <p>Provide appropriate level of detail. Too much information overwhelms; too little doesn't explain enough.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="section">
+        <div class="container">
+            <h2 class="section-title">Learning Resources</h2>
+
+            <div class="resources-layout">
+                <!-- Documentation & Tools -->
+                <div class="resource-category">
+                    <h3><i class="fas fa-book"></i> Documentation & Tools</h3>
+                    <div class="resource-list">
+                        <a href="https://christophm.github.io/interpretable-ml-book/" class="resource-item" target="_blank">
+                            <div class="resource-icon">📚</div>
+                            <div class="resource-content">
+                                <h4>Interpretable Machine Learning</h4>
+                                <p>Comprehensive book by Christoph Molnar covering XAI concepts and techniques</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/slundberg/shap" class="resource-item" target="_blank">
+                            <div class="resource-icon">🔧</div>
+                            <div class="resource-content">
+                                <h4>SHAP Library</h4>
+                                <p>Python library for SHapley Additive exPlanations with extensive documentation</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/marcotcr/lime" class="resource-item" target="_blank">
+                            <div class="resource-icon">🔧</div>
+                            <div class="resource-content">
+                                <h4>LIME</h4>
+                                <p>Local Interpretable Model-agnostic Explanations implementation</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/interpretml/interpret" class="resource-item" target="_blank">
+                            <div class="resource-icon">🔧</div>
+                            <div class="resource-content">
+                                <h4>InterpretML</h4>
+                                <p>Microsoft's toolkit for interpretable machine learning</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/SeldonIO/alibi" class="resource-item" target="_blank">
+                            <div class="resource-icon">🔧</div>
+                            <div class="resource-content">
+                                <h4>Alibi</h4>
+                                <p>Comprehensive XAI library with multiple explanation algorithms</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/pytorch/captum" class="resource-item" target="_blank">
+                            <div class="resource-icon">🔧</div>
+                            <div class="resource-content">
+                                <h4>Captum</h4>
+                                <p>PyTorch library for model interpretability and understanding</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Related Topics -->
+                <div class="resource-category">
+                    <h3><i class="fas fa-link"></i> Related Resources</h3>
+                    <div class="resource-list">
+                        <a href="https://prateekdutta2001.github.io/NeuraNet/" class="resource-item external" target="_blank">
+                            <div class="resource-icon">🧠</div>
+                            <div class="resource-content">
+                                <h4>Neural Networks Tutorial</h4>
+                                <p>Master neural network architectures and training - essential foundation for XAI</p>
+                            </div>
+                        </a>
+                        <a href="https://prateekdutta2001.github.io/Agentic.AI/" class="resource-item external" target="_blank">
+                            <div class="resource-icon">🤖</div>
+                            <div class="resource-content">
+                                <h4>Agentic AI Guide</h4>
+                                <p>Explore autonomous AI systems and the importance of explainability in agent behavior</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>🔍 Explainable AI</h4>
+                    <p>Your comprehensive resource for transparent and interpretable artificial intelligence systems.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#fundamentals">Fundamentals</a></li>
+                        <li><a href="#techniques">Techniques</a></li>
+                        <li><a href="#applications">Applications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Related Guides</h4>
+                    <ul>
+                        <li><a href="https://prateekdutta2001.github.io/NeuraNet/" target="_blank">Neural Networks</a></li>
+                        <li><a href="https://prateekdutta2001.github.io/Agentic.AI/" target="_blank">Agentic AI</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Explainable AI. Designed & Developed By: <strong>Prateek Dutta</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
